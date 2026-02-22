@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+
+
+
+<h1><center>My Cart</center></h1>
+<div id="cart-items" style="border: 2px solid; margin: 20px; padding: 20px; background-color: rgb(219, 191, 247);"></div>
+
+<center><div id="checkout-section" style="margin-top:20px; padding: 30px; "></center></div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartItems = document.getElementById("cart-items");
+let checkoutSection = document.getElementById("checkout-section");
+
+function renderCart() {
+    cartItems.innerHTML = "";
+    checkoutSection.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = "<p>Your cart is empty 🛒 Go Shop Now !!! </p>";
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        let row = document.createElement("div");
+        row.style.display = "flex";
+        row.style.alignItems = "center";
+        row.style.marginBottom = "15px";
+        row.style.borderBottom = "1px solid #ccc";
+        row.style.paddingBottom = "10px";
+  
+
+        row.innerHTML = `
+            <img src="${item.image} " width="80" height="80" style="margin-right:15px; border:2px solid; border-radius:7px;">
+            <div style="flex:1">
+                <p><b>${item.name}</b></p>
+                <p>Price: ₹ ${item.price}</p>
+
+                <button onclick="decreaseQty(${index})">−</button>
+                <span style="margin:0 10px">${item.qty}</span>
+                <button onclick="increaseQty(${index})">+</button>
+
+                <p>Total: ₹ ${item.totalPrice}</p>
+                <button onclick="removeItem(${index})" style="color:red">Remove</button>
+            </div>
+        `;
+
+        cartItems.appendChild(row);
+        total += item.totalPrice;
+    });
+
+    let totalDiv = document.createElement("h3");
+    totalDiv.textContent = "Total Amount : ₹ " + total;
+    cartItems.appendChild(totalDiv);
+
+    let checkoutBtn = document.createElement("button");
+    checkoutBtn.textContent = "Checkout";
+    checkoutBtn.style.padding = "10px 20px";
+    checkoutBtn.style.fontSize = "16px";
+    checkoutBtn.onclick = () => checkout(total);
+
+    checkoutSection.appendChild(checkoutBtn);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function increaseQty(index) {
+    cart[index].qty += 1;
+    cart[index].totalPrice += cart[index].price;
+    renderCart();
+}
+
+function decreaseQty(index) {
+    if (cart[index].qty > 1) {
+        cart[index].qty -= 1;
+        cart[index].totalPrice -= cart[index].price;
+    } else {
+        cart.splice(index, 1);
+    }
+    renderCart();
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    renderCart();
+}
+
+function checkout(total) {
+    let confirmOrder = confirm("Total Amount ₹ " + total + "\nConfirm checkout?");
+    if (confirmOrder) {
+        alert(" Yaay !!!Order placed successfully ✅");
+        localStorage.removeItem("cart");
+        cart = [];
+        renderCart();
+    }
+}
+
+renderCart();
+</script>
+
+</body>
+</html>

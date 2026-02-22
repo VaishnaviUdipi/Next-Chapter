@@ -1,0 +1,521 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    background-color: rgb(200, 186, 246);
+  border: solid;
+    justify-content: space-between;
+    padding: 10px ;
+
+    
+}
+nav input{
+    height: 30px;
+
+}
+.nav-link{
+    display: flex;
+    gap: 40px;
+    cursor: pointer;
+}
+.nav-link::placeholder{
+    height: 30px;
+
+}
+
+
+.container{
+
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 40px;
+background-color: rgb(215, 186, 235);
+border: 2px solid;
+}
+
+.products{
+    padding: 25px;
+    border: 2px solid;
+    margin: 50px;
+    justify-content: center;
+    background-color: rgb(199, 183, 250);
+    border-radius: 10px;
+}
+
+.products:hover{
+    transform: translateY(-8px);
+}
+
+.products button{
+    background-color: rgb(212, 168, 254);
+    justify-content: center;
+    text-align:center;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 11px;
+    border-radius: 12px;
+}
+
+.products img {
+     border: 2px solid;
+    border-radius: 10px;
+}
+
+.location{
+    border: 2px solid;
+    margin: 10px;
+    background-color: rgb(236, 215, 255);
+}
+
+.quote{
+    background-color: rgb(225, 214, 250);
+    text-align: center;
+    padding: 90px;
+    font-size: 18px;
+  margin: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+
+}
+
+
+/* action*/
+
+.action-container{
+    display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 10px;
+background-color: rgb(215, 186, 235);
+border: 2px solid;
+text-align: center;
+}
+.abooks{
+ padding: 15px;
+    border: 2px solid;
+    margin: 75px;
+  
+    background-color: rgb(199, 183, 250);
+    border-radius: 10px;
+}
+.abooks:hover{
+    transform: translateY(-8px);
+}
+
+.abooks button{
+    background-color: rgb(212, 168, 254);
+    justify-content: center;
+    text-align:center;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 11px;
+    border-radius: 12px;
+}
+
+.abooks img {
+     border: 2px solid;
+    border-radius: 10px;
+}
+
+
+/*Fiction*/
+
+.F-container{
+
+
+      display: flex;
+    gap: 15px;
+    justify-content: center;                                                                                                                                                                
+    flex-wrap: wrap;
+    background-color: rgb(219, 208, 247);
+    padding: 60px;
+gap: 40px;
+border: 2px solid;
+ 
+}
+
+
+ 
+.fcat{
+    padding: 5px;
+    border: 2px solid;
+    margin: 35px;
+    justify-content: center;
+    background-color: rgb(199, 183, 250);
+    border-radius: 10px;   
+ 
+    text-align: center;
+}
+
+
+.fcat img {
+    border: 2px solid; 
+    border-radius: 10px;
+   align-items: center;   
+}
+
+
+.fcat button{
+    background-color: rgb(240, 168, 254);
+    justify-content: center;
+    text-align:center;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 11px;
+    border-radius: 12px;
+}
+
+
+.fcat:hover{
+    transform: translateY(-8px);
+}
+
+
+
+
+
+
+
+
+/*MYSTERY*/
+.m-container{
+    
+      display: flex;
+    gap: 15px;
+    justify-content: center;                                                                                                                                                                
+    flex-wrap: wrap;
+    background-color: rgb(219, 208, 247);
+    padding: 100px;
+gap: 60px;
+border: 2px solid;
+}
+
+
+.mbooks{
+ padding: 20px;
+    border: 2px solid;
+    margin: 25px;
+    justify-content: center;
+    background-color: rgb(199, 183, 250);
+    border-radius: 10px;   
+ 
+    text-align: center;
+}
+
+.mbooks img {
+     border: 2px solid; 
+    border-radius: 10px;
+   align-items: center; 
+}
+
+.mbooks button{
+      background-color: rgb(240, 168, 254);
+    justify-content: center;
+    text-align:center;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 11px;
+    border-radius: 12px;
+}
+
+.mbooks:hover{
+    transform: translateY(-8px);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* academic*/
+.ac-container{
+     display: flex;
+    gap: 15px;
+    justify-content: center;                                                                                                                                                                
+    flex-wrap: wrap;
+     background-color: rgb(219, 208, 247);
+    padding: 100px;
+gap: 60px;
+border: 2px solid;
+    
+}
+
+.acbooks{
+    padding: 20px;
+    border: 2px solid;
+    margin: 25px;
+    justify-content: center;
+    background-color: rgb(199, 183, 250);
+    border-radius: 10px;   
+ 
+    text-align: center;
+}
+
+
+.acbooks img {
+        border: 2px solid; 
+    border-radius: 10px;
+   align-items: center; 
+}
+
+.acbooks:hover{
+    transform: translateY(-8px);
+}
+
+.acbooks button{
+    background-color: rgb(240, 168, 254);
+    justify-content: center;
+    text-align:center;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 11px;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+/* SELF*/
+.self-container{
+    display: flex;
+    gap: 15px;
+    justify-content: center;                                                                                                                                                                
+    flex-wrap: wrap;
+     background-color: rgb(219, 208, 247);
+    padding: 100px;
+gap: 60px;
+border: 2px solid;
+}
+
+.sbooks{
+        padding: 20px;
+    border: 2px solid;
+    margin: 25px;
+    justify-content: center;
+    background-color: rgb(199, 183, 250);
+    border-radius: 10px;   
+ 
+    text-align: center;
+}
+
+.sbooks img{
+        border: 2px solid; 
+    border-radius: 10px;
+   align-items: center; 
+}
+.sbooks:hover{
+     transform: translateY(-8px);
+}
+
+.sbooks button {
+    background-color: rgb(240, 168, 254);
+    justify-content: center;
+    text-align:center;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 11px;
+    border-radius: 12px;
+}
+
+
+/*contact*/
+.matter{
+    text-align: left;
+    padding: 60px;
+    margin: 40px;
+}
+
+
+
+.details{
+    text-align: right;
+    padding-right: 210px;
+    margin: 170px;
+}
+.c-container{
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin: 50px;
+    background-color: rgb(223, 201, 243);
+}
+
+.details button{
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(197, 128, 253);
+}
+
+
+
+
+/* horror*/
+.h-container{
+     display: flex;
+    gap: 15px;
+    justify-content: center;                                                                                                                                                                
+    flex-wrap: wrap;
+     background-color: rgb(219, 208, 247);
+    padding: 100px;
+gap: 60px;
+border: 2px solid;
+}
+
+.hbooks{
+   padding: 20px;
+    border: 2px solid;
+    margin: 25px;
+    justify-content: center;
+    background-color: rgb(199, 183, 250);
+    border-radius: 10px;   
+    text-align: center;
+}
+
+.hbooks img {
+       border: 2px solid; 
+    border-radius: 10px;
+   align-items: center;
+}
+
+.hbooks:hover{
+      transform: translateY(-8px);
+}
+
+.hbooks button{
+     background-color: rgb(240, 168, 254);
+    justify-content: center;
+    text-align:center;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 11px;
+    border-radius: 12px;
+}
+
+
+/*Second*/
+
+.sh-container{
+     display: flex;
+    gap: 15px;
+    justify-content: center;                                                                                                                                                                
+    flex-wrap: wrap;
+     background-color: rgb(219, 208, 247);
+    padding: 100px;
+gap: 60px;
+border: 2px solid;
+}
+
+.shbooks{
+   padding: 20px;
+    border: 2px solid;
+    margin: 25px;
+    justify-content: center;
+    background-color: rgb(199, 183, 250);
+    border-radius: 10px;   
+    text-align: center;
+  
+}
+
+.shbooks img {
+       border: 2px solid; 
+    border-radius: 10px;
+   align-items: center;
+}
+
+.shbooks:hover{
+      transform: translateY(-8px);
+}
+
+.shbooks button{
+     background-color: rgb(240, 168, 254);
+    justify-content: center;
+    text-align:center;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 11px;
+    border-radius: 12px;
+}
+
+
+
+
+
+/*Profile*/
+
+.info{
+background-color: rgb(196, 160, 243);;
+border-radius: 12px;
+margin: 10px;
+cursor: pointer;
+border: 2px solid;
+justify-content: center;
+padding: 30px;
+}
+.info:hover{
+transform: translateY(-3px);
+}
+
+.p img {
+border-radius: 80px;
+}
+
+
+
+
+
+/* ABOUT*/
+.About{
+ border: 2px solid;
+ background-color:rgb(212, 186, 247);;
+margin: 10px;
+ gap: 60px;
+ padding: 70px;
+ border-radius: 15px;
+}
+.Equote{
+ border: 2px solid;
+ border-radius: 7px;
+ padding: 10px;
+ padding-bottom: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: rgb(41, 38, 38);
+    text-align: center;
+    padding: 35px;
+}
+
+
+/*cart*/
+body{
+    background-color: rgb(242, 228, 255);
+padding: 30px;
+}
